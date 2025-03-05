@@ -1,0 +1,95 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container details">
+        <h2 class="title"> Multi-Term Search</h2>
+        <hr/>
+            <form class="Search" method = "POST" action="{{ url_for('movie_multi_term_search')}}">
+                <fieldset>
+                    <legend>Movie:</legend>
+                    <label for="movie_title">Movie Title: </label>
+                    <input type="text" id="movie_title" name="movie_title"><br><br>
+                    <label for="movie_release_year">Release Year: </label>
+                    <select id="release_year_sign" name="release_year_sign">
+                        <option value="equal"> = </option>
+                        <option value="greater"> > </option>
+                        <option value="less"> < </option>
+                    </select>
+                    <input type="text" id="movie_release_year" name="movie_release_year"><br><br>
+                    <label for="movie_genre">Genre: </label>
+                    <input type="text" id="movie_genre" name="movie_genre"><br><br>
+                    <input type="submit" value="Search">
+                </fieldset>
+            </form>
+            <form class="Search" method = "POST" action="{{ url_for('song_multi_term_search')}}">
+                <fieldset>
+                    <legend>Song:</legend>
+                    <label for="songtitle">Song Name: </label>
+                    <input type="text" id="songtitle" name="songtitle"><br><br>
+                    <label for="songlength">Song Length: </label>
+                    <select id="songlength_sign" name="songlength_sign">
+                        <option value="equal"> = </option>
+                        <option value="greater"> > </option>
+                        <option value="less"> < </option>
+                    </select>
+                    <input type="text" id="songlength" name="songlength"><br><br>
+                    <label for="songgenre">Genre: </label>
+                    <input type="text" id="songgenre" name="songgenre"><br><br>
+                    <label for="songartist">Song Artist Name: </label>
+                    <input type="text" id="songartist" name="songartist"><br><br>
+                    <input type="submit" value="Search">
+                </fieldset>
+            </form>
+            <form class="Search" method = "POST" action="{{ url_for('tvshow_multi_term_search')}}">
+                <fieldset>
+                    <legend>TV Show:</legend>
+                    <label for="tv_show_name">TV Show Name: </label>
+                    <input type="text" id="tv_show_name" name="tv_show_name"><br><br>
+                    <label for="tv_show_genre">Genre: </label>
+                    <input type="text" id="tv_show_genre" name="tv_show_genre"><br><br>
+                    <input type="submit" value="Search">
+                </fieldset>
+            </form>
+            <form class="Search" method = "POST" action="{{ url_for('podcast_multi_term_search')}}">
+                <fieldset>
+                    <legend>Podcast:</legend>
+                    <label for="podcast_name">Podcast Name: </label>
+                    <input type="text" id="podcast_name" name="podcast_name"><br><br>
+                    <label for="podcast_episode_count">Podcast Episode Count: </label>
+                    <select id="podcast_episode_count_sign" name="podcast_episode_count_sign">
+                        <option value="equal"> = </option>
+                        <option value="greater"> > </option>
+                        <option value="less"> < </option>
+                    </select>
+                    <input type="text" id="podcast_episode_count" name="podcast_episode_count"><br><br>
+                    <label for="podcast_genre">Genre: </label>
+                    <input type="text" id="podcast_genre" name="podcast_genre"><br><br>
+                    <input type="submit" value="Search">
+                </fieldset>
+            </form>
+            </form>
+            <form class="Search" method = "POST" action="{{ url_for('artist_multi_term_search')}}">
+                <fieldset>
+                    <legend>Artist:</legend>
+                    <label for="artist_name">Artist Name: </label>
+                    <input type="text" id="artist_name" name="artist_name"><br><br>
+                    <label for="artist_song_name">Artist's Song Name: </label>
+                    <input type="text" id="artist_song_name" name="artist_song_name"><br><br>
+                    <input type="submit" value="Search">
+                </fieldset>
+            </form>
+            <form class="Search" method = "POST" action="{{ url_for('album_multi_term_search')}}">
+                <fieldset>
+                    <legend>Album:</legend>
+                    <label for="album_name">Album Name: </label>
+                    <input type="text" id="album_name" name="album_name"><br><br>
+                    <label for="album_song_genre">Album Song Genre: </label>
+                    <input type="text" id="album_song_genre" name="album_song_genre"><br><br>
+                    <label for="album_artist_name">Album Artist Name: </label>
+                    <input type="text" id="album_artist_name" name="album_artist_name"><br><br>
+                    <input type="submit" value="Search">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+{% include 'bottom.html'%}
